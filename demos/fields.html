@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Browser Screen Keyboard: Form Fields</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../css/typer.css" />
+  <script src="../lib/jquery-1.9.0.min.js"></script>
+  <script src="../Typer.js"></script>
+</head>
+<body>
+
+<form>
+  <p>
+    <input type="text" name="test1" />
+  </p>
+  <p>
+    <input type="text" name="test2" />
+  </p>
+  <p>
+    <textarea name="test3"></textarea>
+  </p>
+  <p>
+    <button class="open-typer" type="button">Open Typer</button>
+  </p>
+  <p>
+    <input type="text" name="test4" />
+  </p>
+  <p>
+    <input type="text" name="test5" />
+  </p>
+  <p>
+    <input type="text" name="test6" />
+  </p>
+  <p>
+    <input type="text" name="test7" />
+  </p>
+  <p>
+    <input type="text" name="test8" />
+  </p>
+  <p>
+    <input type="text" name="test9" />
+  </p>
+  <p>
+    <input type="text" name="test10" />
+  </p>
+</form>
+
+<script>
+  Typer().attach(document.forms[0]);
+
+  $("button.open-typer").click(function(){
+    Typer()
+      .done(function(value){
+        alert(value);
+      })
+      .canceled(function(){
+        alert("The typer was canceled :(");
+      })
+      .textChanged(function(value){
+        console.log("New value:", value);
+      })
+      .open();
+  });
+</script>
+</body>
+<html>

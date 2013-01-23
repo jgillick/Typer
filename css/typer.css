@@ -1,0 +1,20 @@
+
+/* resets */ 
+.field-typer ul { margin: 0; padding: 0; list-style-type: none; overflow: hidden; }
+.field-typer ul li { float: left; }
+
+/* UI */
+.field-typer-wrapper { z-index: 100; background: rgba(9, 2, 63, .5);}
+.field-typer { position: relative; width: 95%; margin: 20px auto; padding: 10px; background: #fff; border: 1px solid #999; border-radius: 10px; font: normal 16px "courier"; }
+.field-typer .row { overflow: hidden; }
+.field-typer ul li { padding: 5px; }
+
+.field-typer .row.selected { background: #959cd0; }
+.field-typer .row.selected li.selected { border: 1px solid #999; background: #beb6ee; }
+
+.field-typer .row.secondary { padding-left: 2em; font-size: 13px; font-style: italic; }
+
+.field-typer .value { padding: 3px; border: 1px solid #999; background: #ddd; color: #333; }
+.field-typer .value em { display: inline-block; padding: 0 1px; font-style: normal; background: #959cd0; }
+.field-typer .value.selected { background: #ddd; box-shadow: 2px 2px 5px #959cd0; }
+
